@@ -9,7 +9,7 @@ That was done on purpose just for visual representation reasons, as 10x10 grid w
 
 ## Screenshot
 
-
+![Screenshot](https://github.com/VytautasLozickas/WorldPosts/blob/master/screenshot.png)
 
 ## Running the app
 
