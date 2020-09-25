@@ -5,8 +5,10 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <Color x:Key="PrimaryColor">#0077DD</Color>
-        <Color x:Key="InverseForegroundColor">#FFFFFF</Color>
+        <Color x:Key="BackgroundColor">#FFFFFF</Color>
+        <Color x:Key="InverseForegroundColor">#EFEFEF</Color>
         <SolidColorBrush x:Key="PrimaryColorBrush" Color="{StaticResource PrimaryColor}"/>
+        <SolidColorBrush x:Key="BackgroundColorBrush" Color="{StaticResource BackgroundColor}"/>
         <SolidColorBrush x:Key="InverseForegroundColorBrush" Color="{StaticResource InverseForegroundColor}"/>
         <DropShadowEffect x:Key="ShadowEffect" ShadowDepth="1" Direction="-90" Color="#000000" BlurRadius="4" Opacity="0.35"/>
         
@@ -26,6 +28,12 @@
             <Setter Property="Button.Foreground" Value="{StaticResource InverseForegroundColorBrush}"/>
             <Setter Property="Button.BorderThickness" Value="0"/>
             <Setter Property="Button.Effect" Value="{StaticResource ShadowEffect}"/>
+        </Style>
+
+        <Style x:Key="ProgressBarStyle" TargetType="ProgressBar">
+            <Setter Property="ProgressBar.BorderThickness" Value="0"/>
+            <Setter Property="ProgressBar.Background" Value="{StaticResource BackgroundColorBrush}"/>
+            <Setter Property="ProgressBar.Foreground" Value="{StaticResource PrimaryColorBrush}"/>
         </Style>
     </Application.Resources>
 </Application>

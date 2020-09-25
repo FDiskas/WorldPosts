@@ -88,6 +88,15 @@ namespace WorldPosts.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://jsonplaceholder.typicode.com/posts.
+        /// </summary>
+        public static string PostsDataUrl {
+            get {
+                return ResourceManager.GetString("PostsDataUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to User ID.
         /// </summary>
         public static string UserIdLabel {

@@ -126,6 +126,9 @@
   <data name="LoadPostsLabel" xml:space="preserve">
     <value>Load posts</value>
   </data>
+  <data name="PostsDataUrl" xml:space="preserve">
+    <value>https://jsonplaceholder.typicode.com/posts</value>
+  </data>
   <data name="UserIdLabel" xml:space="preserve">
     <value>User ID</value>
   </data>

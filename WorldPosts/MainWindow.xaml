@@ -18,7 +18,16 @@
         </Grid>
         <Grid Grid.Row="2">
             <StackPanel HorizontalAlignment="Center">
-                <Button x:Name="LoadPostsButton" Content="{Binding Source={x:Static prop:Resources.LoadPostsLabel}}" Style="{StaticResource DefaultButtonStyle}" Click="OnLoadClick"/>
+                <Button x:Name="LoadPostsButton"
+                        Content="{Binding Source={x:Static prop:Resources.LoadPostsLabel}}"
+                        Style="{StaticResource DefaultButtonStyle}" Click="OnLoadClick"
+                />
+                <ProgressBar x:Name="ProgressBarComponent"
+                             Height="10"
+                             IsIndeterminate="True"
+                             Style="{StaticResource ProgressBarStyle}"
+                             Visibility="Hidden"
+                />
             </StackPanel>
             <components:PostGrid x:Name="PostGridComponent" Visibility="Hidden" />
         </Grid>

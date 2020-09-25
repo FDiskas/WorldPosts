@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Windows;
-using WorldPosts.Models;
-using WorldPosts.Components;
+﻿using System.Windows;
+using WorldPosts.Services;
 
 namespace WorldPosts
 {
@@ -10,23 +8,31 @@ namespace WorldPosts
     /// </summary>
     public partial class MainWindow : Window
     {
+        private PostProviderService postProvider = new PostProviderService();
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void OnLoadClick(object sender, RoutedEventArgs e)
+        private async void OnLoadClick(object sender, RoutedEventArgs e)
+        {
+            StartLoading();
+
+            PostGridComponent.Posts = await postProvider.GetPosts();
+
+            StopLoading();
+        }
+
+        private void StartLoading()
         {
             LoadPostsButton.Visibility = Visibility.Hidden;
+            ProgressBarComponent.Visibility = Visibility.Visible;
+        }
 
-            var posts = new List<Post>
-            {
-                new Post() { Id = 15, UserId = 95, Title = "Hello", Body = "Hello everyone!" },
-                new Post() { Id = 17, UserId = 77, Title = "Hi", Body = "Hi guys!" }
-            };
-
-            PostGridComponent.Posts = posts;
-
+        private void StopLoading()
+        {
+            ProgressBarComponent.Visibility = Visibility.Hidden;
             PostGridComponent.Visibility = Visibility.Visible;
         }
     }
