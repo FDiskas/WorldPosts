@@ -35,7 +35,7 @@ a. How would you do this using LINQ syntax (write a short example)?
 Something like this could work:
 ```
 var grouped = from p in products
-    order by p.Id ascending
+    orderby p.Id ascending
     group p.AvailableIn by p.Id into gp
     select new { Id = gp.key, AvailableIn = gp.ToList() };
 ```
