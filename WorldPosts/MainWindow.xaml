@@ -4,20 +4,23 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorldPosts"
-        xmlns:prop="clr-namespace:WorldPosts.Properties"
+        xmlns:prop="clr-namespace:WorldPosts.Properties" xmlns:components="clr-namespace:WorldPosts.Components"
         mc:Ignorable="d"
         Title="{Binding Source={x:Static prop:Resources.AppName}}" Height="480" Width="640">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="32"/>
             <RowDefinition Height="8"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" HorizontalAlignment="Center">
             <TextBlock VerticalAlignment="Center" Style="{StaticResource TitleTextStyle}" Text="{Binding Source={x:Static prop:Resources.WelcomeTitle}}"/>
         </Grid>
-        <Grid Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Button Content="{Binding Source={x:Static prop:Resources.LoadPostsLabel}}" Style="{StaticResource DefaultButtonStyle}"/>
+        <Grid Grid.Row="2">
+            <StackPanel HorizontalAlignment="Center">
+                <Button x:Name="LoadPostsButton" Content="{Binding Source={x:Static prop:Resources.LoadPostsLabel}}" Style="{StaticResource DefaultButtonStyle}" Click="OnLoadClick"/>
+            </StackPanel>
+            <components:PostGrid x:Name="PostGridComponent" Visibility="Hidden" />
         </Grid>
     </Grid>
 </Window>

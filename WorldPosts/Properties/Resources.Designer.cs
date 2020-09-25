@@ -70,11 +70,29 @@ namespace WorldPosts.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ID.
+        /// </summary>
+        public static string IdLabel {
+            get {
+                return ResourceManager.GetString("IdLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Load posts.
         /// </summary>
         public static string LoadPostsLabel {
             get {
                 return ResourceManager.GetString("LoadPostsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User ID.
+        /// </summary>
+        public static string UserIdLabel {
+            get {
+                return ResourceManager.GetString("UserIdLabel", resourceCulture);
             }
         }
         

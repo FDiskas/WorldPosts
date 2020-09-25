@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using WorldPosts.Models;
+using WorldPosts.Components;
 
 namespace WorldPosts
 {
@@ -23,6 +13,21 @@ namespace WorldPosts
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void OnLoadClick(object sender, RoutedEventArgs e)
+        {
+            LoadPostsButton.Visibility = Visibility.Hidden;
+
+            var posts = new List<Post>
+            {
+                new Post() { Id = 15, UserId = 95, Title = "Hello", Body = "Hello everyone!" },
+                new Post() { Id = 17, UserId = 77, Title = "Hi", Body = "Hi guys!" }
+            };
+
+            PostGridComponent.Posts = posts;
+
+            PostGridComponent.Visibility = Visibility.Visible;
         }
     }
 }

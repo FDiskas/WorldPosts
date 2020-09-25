@@ -120,8 +120,14 @@
   <data name="AppName" xml:space="preserve">
     <value>World Posts</value>
   </data>
+  <data name="IdLabel" xml:space="preserve">
+    <value>ID</value>
+  </data>
   <data name="LoadPostsLabel" xml:space="preserve">
     <value>Load posts</value>
+  </data>
+  <data name="UserIdLabel" xml:space="preserve">
+    <value>User ID</value>
   </data>
   <data name="WelcomeTitle" xml:space="preserve">
     <value>Welcome to World Posts!</value>

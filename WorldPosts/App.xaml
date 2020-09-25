@@ -15,6 +15,11 @@
             <Setter Property="TextBlock.FontSize" Value="20" />
         </Style>
 
+        <Style x:Key="HeaderTextStyle" TargetType="TextBlock">
+            <Setter Property="TextBlock.FontWeight" Value="Bold" />
+            <Setter Property="TextBlock.FontSize" Value="14" />
+        </Style>
+
         <Style x:Key="DefaultButtonStyle" TargetType="Button">
             <Setter Property="Button.Padding" Value="16, 4"/>
             <Setter Property="Button.Background" Value="{StaticResource PrimaryColorBrush}"/>
