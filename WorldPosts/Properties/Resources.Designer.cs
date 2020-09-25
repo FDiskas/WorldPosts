@@ -68,5 +68,23 @@ namespace WorldPosts.Properties {
                 return ResourceManager.GetString("AppName", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Load posts.
+        /// </summary>
+        public static string LoadPostsLabel {
+            get {
+                return ResourceManager.GetString("LoadPostsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome to World Posts!.
+        /// </summary>
+        public static string WelcomeTitle {
+            get {
+                return ResourceManager.GetString("WelcomeTitle", resourceCulture);
+            }
+        }
     }
 }
