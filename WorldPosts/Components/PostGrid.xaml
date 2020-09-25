@@ -11,7 +11,7 @@
         <ItemsControl ItemsSource="{Binding Posts, ElementName=Self}" BorderThickness="0">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <UniformGrid Columns="3"/>
+                    <UniformGrid Columns="4"/>
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>

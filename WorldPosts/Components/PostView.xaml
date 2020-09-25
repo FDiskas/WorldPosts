@@ -9,18 +9,25 @@
     <Grid Background="White" Height="160" Margin="4" Effect="{StaticResource ShadowEffect}">
         <Grid Margin="4">
             <Grid.RowDefinitions>
-                <RowDefinition Height="24"/>
+                <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" TextAlignment="Center" Text="{Binding Title}" Style="{StaticResource HeaderTextStyle}"/>
-            <TextBlock Grid.Row="1" TextAlignment="Center" VerticalAlignment="Top" Text="{Binding Body}" Margin="0 4 0 4"/>
+            <TextBlock Grid.Row="0" TextAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Text="{Binding Title}" Style="{StaticResource HeaderTextStyle}"/>
+            <TextBlock Grid.Row="1" TextAlignment="Justify" TextTrimming="WordEllipsis" VerticalAlignment="Top" TextWrapping="Wrap" Text="{Binding Body}" Margin="0 4 0 4" Style="{StaticResource BodyTextStyle}"/>
             <Button 
                 Grid.Row="2" 
                 Content="{Binding VisibleId, ElementName=Self}" 
                 Click="OnChangeViewModeClick"
                 VerticalAlignment="Bottom" 
-            />
+                Style="{StaticResource FadedButtonStyle}"
+            >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="3"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </Grid>
     </Grid>
 </UserControl>
